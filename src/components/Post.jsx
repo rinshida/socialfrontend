@@ -9,7 +9,7 @@ const productId = searchParams.get("id");
     useEffect(()=>{
         const fetchProduct = async ()=>{
 
-            await axios.get(`api/5000/getproduct?productId=${productId}`)
+            await axios.get(`https://socialbackend-gxmb.onrender.com/api/getproduct?productId=${productId}`)
 
         }
     },[])

@@ -21,7 +21,7 @@ const Posts = () => {
 
     async function getPosts() {
 
-      const response = await axios.get("http://localhost:5000/api/getposts", {
+      const response = await axios.get("https://socialbackend-gxmb.onrender.com/api/getposts", {
         headers: { Authorization: `Bearer ${token}` } //barer(jwt token)
       })
       console.log(response);
@@ -64,7 +64,7 @@ const Posts = () => {
     console.log("on setLikePost function");
     const newLikeState = !like[j];
     setLike(prev => ({ ...prev, [j]: !prev[j] }))
-    const response = await axios.post("http://localhost:5000/api/like", { userId:user._id, productId, likeState: newLikeState })
+    const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/like", { userId:user._id, productId, likeState: newLikeState })
     if (response.status == 200) {
       console.log("like successfully")
       // window.alert("like successfull")

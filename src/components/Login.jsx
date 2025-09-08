@@ -9,7 +9,7 @@ const Login = () => {
         console.log(email,password)
        
   
-        const response = await axios.post("http://localhost:5000/api/login",{email,password})
+        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/login",{email,password})
         if(response.status==200){
             console.log("data sented successfully")
             window.alert("Login successfull")

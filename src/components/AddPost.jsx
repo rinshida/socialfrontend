@@ -25,7 +25,7 @@ const AddPost = () => {
         )
        
   try{
-        const response = await axios.post("http://localhost:5000/api/addpost",{caption,discription,images:files,userId:id})
+        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/addpost",{caption,discription,images:files,userId:id})
         if(response){
             console.log("data sented successfully")
             window.alert("added successfully")

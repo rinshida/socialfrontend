@@ -12,7 +12,7 @@ const OtpVerification = () => {
         console.log(otp)
        
   
-        const response = await axios.post("http://localhost:5000/api/otpverification",{OTP:otp})
+        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/otpverification",{OTP:otp})
         if(response.status==200){
             console.log("otp sented successfully")
             window.alert("email verified")

@@ -25,7 +25,7 @@ const Signup = () => {
     
        
   try{
-        const response = await axios.post("http://localhost:5000/api/register",{name,email,password,profile:Base64File})
+        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/register",{name,email,password,profile:Base64File})
         if(response.status == 200){
             console.log("data sented successfully")
             window.alert("Registered successfully")

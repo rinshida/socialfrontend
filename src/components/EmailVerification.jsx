@@ -12,7 +12,7 @@ const [email,setEmail] = useState("")
         // console.log(otp)
        
   
-        const response = await axios.post("http://localhost:5000/api/otp",{email})
+        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/otp",{email})
         if(response.status==200){
             console.log("otp sented successfully")
             window.alert("otp has sented")

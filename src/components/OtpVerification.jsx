@@ -28,7 +28,7 @@ const OtpVerification = () => {
     
   return (
     <div className=' w-screen h-screen flex flex-col items-center justify-center gap-3 bg-blue-950'>
-      <h1 className=' text-2xl font-black text-white'>LOGIN</h1>
+      <h1 className=' text-2xl font-black text-white'>OTP verification</h1>
         <div>
           <form  onSubmit={submit} className=' flex flex-col gap-2 justify-center border p-5 bg-gray-300'>
             <label className=' font-bold'>OTP : </label>

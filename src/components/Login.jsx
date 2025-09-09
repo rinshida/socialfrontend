@@ -12,8 +12,14 @@ const Login = () => {
         const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/login",{email,password})
         if(response.status==200){
             console.log("data sented successfully")
+
+            //  window.alert("Registered successfully")
+            console.log(response.data.token)
+            //localStorage.setItem('id',response.data.data._id)
+            localStorage.setItem('id',response.data.token)
             window.alert("Login successfull")
             console.log(response)
+            navigate('/posts')
         }else{
           window.alert("incorrect password")
             console.log(response)

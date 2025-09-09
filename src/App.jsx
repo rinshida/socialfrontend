@@ -26,6 +26,7 @@ const App = () => {
         <Route  path='/post' element={<ProtectedRoute><LayoutWithNavbar><Post/></LayoutWithNavbar></ProtectedRoute>} />
         <Route  path='/add' element={<ProtectedRoute><LayoutWithNavbar><AddPost/></LayoutWithNavbar></ProtectedRoute>} />
         
+
       </Routes>
     </div>
   )

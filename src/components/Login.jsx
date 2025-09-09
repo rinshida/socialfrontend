@@ -1,15 +1,17 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Navigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+    const navigate = useNavigate()
 
     const submit = async(e)=>{
          e.preventDefault()
         console.log(email,password)
        
+
   
         const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/login",{email,password})
         if(response.status==200){
@@ -21,7 +23,7 @@ const Login = () => {
             localStorage.setItem('id',response.data.token)
             window.alert("Login successfull")
             console.log(response)
-            Navigate('/posts')
+            navigate('/posts')
         }else{
           window.alert("incorrect password")
             console.log(response)

@@ -64,15 +64,15 @@ const Posts = () => {
     console.log("on setLikePost function");
     const newLikeState = !like[j];
     setLike(prev => ({ ...prev, [j]: !prev[j] }))
-    const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/like", { userId:user._id, productId, likeState: newLikeState })
-    if (response.status == 200) {
-      console.log("like successfully")
-      // window.alert("like successfull")
-      if(newLikeState==true){
+    if(newLikeState==true){
         setLikeCount((prev)=>({...prev,[j]:prev[j]+1}))
       }else{
         setLikeCount((prev)=>({...prev,[j]:prev[j]-1}))
       }
+    const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/like", { userId:user._id, productId, likeState: newLikeState })
+    if (response.status == 200) {
+      console.log("like successfully")
+      // window.alert("like successfull")
       console.log(response)
     } else {
       window.alert("like unsuccessfull")

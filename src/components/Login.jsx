@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { Navigate } from 'react-router-dom'
 
 const Login = () => {
   const [email,setEmail] = useState("")
@@ -20,7 +21,7 @@ const Login = () => {
             localStorage.setItem('id',response.data.token)
             window.alert("Login successfull")
             console.log(response)
-            navigate('/posts')
+            Navigate('/posts')
         }else{
           window.alert("incorrect password")
             console.log(response)

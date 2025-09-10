@@ -8,6 +8,7 @@ const OtpVerification = () => {
    const navigate = useNavigate();
    const location = useLocation();
    const email = location.state?.email;
+   console.log(email)
 
     const submit = async(e)=>{
          e.preventDefault()

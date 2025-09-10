@@ -20,7 +20,7 @@ const App = () => {
         <Route  path='/signup' element={<PublicRoute><Signup/></PublicRoute>} />
         <Route  path='/' element={<PublicRoute><Login/></PublicRoute>} />
         <Route  path='/login' element={<PublicRoute><Login/></PublicRoute>} />
-        <Route  path='/verification' element={<PublicRoute><EmailVerification/></PublicRoute>} />
+        {/* <Route  path='/verification' element={<PublicRoute><EmailVerification/></PublicRoute>} /> */}
         <Route  path='/otp' element={<PublicRoute><OtpVerification/></PublicRoute>} />
         
         <Route  path='/posts' element={<ProtectedRoute><LayoutWithNavbar><Posts/></LayoutWithNavbar></ProtectedRoute>} />

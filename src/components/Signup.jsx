@@ -38,7 +38,7 @@ const Signup = () => {
             const email = response.data.email
             //localStorage.setItem('id',response.data.data._id)
             // localStorage.setItem('id',response.data.token)
-            navigate('/verification', { state: { email } })
+            navigate('/otp', { state: { email } })
             
         }else{
           console.log("error")

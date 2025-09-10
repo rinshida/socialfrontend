@@ -19,6 +19,7 @@ const App = () => {
       <Routes>
         <Route  path='/signup' element={<PublicRoute><Signup/></PublicRoute>} />
         <Route  path='/' element={<PublicRoute><Login/></PublicRoute>} />
+        <Route  path='/login' element={<PublicRoute><Login/></PublicRoute>} />
         <Route  path='/verification' element={<PublicRoute><EmailVerification/></PublicRoute>} />
         <Route  path='/otp' element={<PublicRoute><OtpVerification/></PublicRoute>} />
         

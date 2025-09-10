@@ -33,11 +33,12 @@ const Signup = () => {
         const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/register",{name,email,password,profile:Base64File})
         if(response.status == 200){
             console.log("data sented successfully")
-            window.alert("Registered successfully")
-            console.log(response.data.token)
+            window.alert("OTP has sent to your email")
+            // console.log(response.data.token)
+            const email = response.data.email
             //localStorage.setItem('id',response.data.data._id)
-            localStorage.setItem('id',response.data.token)
-            navigate('/posts')
+            // localStorage.setItem('id',response.data.token)
+            navigate('/verification', { state: { email } })
             
         }else{
           console.log("error")

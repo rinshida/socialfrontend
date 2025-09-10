@@ -1,23 +1,26 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const OtpVerification = () => {
   const [otp,setOtp] = useState("")
    const navigate = useNavigate();
+   const location = useLocation();
+   const email = location.state?.email;
 
     const submit = async(e)=>{
          e.preventDefault()
         console.log(otp)
        
   
-        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/otpverification",{OTP:otp})
+        const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/otpverification",{OTP:otp,email})
         if(response.status==200){
             console.log("otp sented successfully")
-            window.alert("email verified")
+            localStorage.setItem('id',response.data.token)
+            window.alert("OTP has been verified, and you have signed up successfully")
             console.log(response)
-             navigate('/signup')
+             navigate('/posts')
         }else{
           window.alert("email is not verified ,try again")
             console.log(response)

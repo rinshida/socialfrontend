@@ -43,7 +43,7 @@ const Login = () => {
             <input className=' border border-white bg-white' type="password" name=""onChange={(e)=>setPassword(e.target.value)} value={password}/>
              
             <button type='submit' className=' bg-blue-800 text-white px-4 py-2'>Submit</button>
-            <h1 className=' text-sm'>Don't have an account? <Link to={'/verification'} ><span className=' text-blue-800 underline'>Signup</span></Link></h1>
+            <h1 className=' text-sm'>Don't have an account? <Link to={'/signup'} ><span className=' text-blue-800 underline'>Signup</span></Link></h1>
         </form>
         </div>
     </div>

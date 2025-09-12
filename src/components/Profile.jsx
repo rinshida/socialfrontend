@@ -2,9 +2,9 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div className=' flex flex-col gap-[20px] w-screen  bg-blue-950 py-[30px] px-[60px]'>
+    <div className=' flex flex-col gap-[20px] w-full  bg-blue-950 py-[30px] px-[60px]'>
 
-       <div className=' w-screen flex justify-between'>
+       <div className=' w-full flex justify-between'>
         <div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src="" alt="" /></div>
         <div className=' flex gap-[200px] items-center text-2xl text-white'>
             <div className=' flex flex-col '>

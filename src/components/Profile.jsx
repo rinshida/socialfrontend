@@ -2,10 +2,10 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div className=' flex flex-col w-screen bg-blue-950'>
+    <div className=' flex flex-col gap-[20px] w-screen bg-blue-950 p-[30px]'>
 
        <div className=' w-screen flex'>
-        <div><img className=' w-[150px] h-[150px] rounded-[50px] bg-gray-50' src="" alt="" /></div>
+        <div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src="" alt="" /></div>
         <div className=' flex gap-[200px] items-center'>
             <div className=' flex flex-col'>
                 <h1>posts</h1>

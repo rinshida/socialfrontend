@@ -12,7 +12,7 @@ const Navebar = () => {
     }
   return (
     <div className=' w-full h-[70px] border-b bg-blue-950 text-white font-serif 
-    overflow-hidden text-3xl font-medium flex justify-between px-[60px] pt-[15px] pb-[20px]'>
+    overflow-hidden text-3xl font-medium flex justify-between px-[60px] pt-[15px] pb-[20px] box-border'>
         <div className=' flex gap-2'><SiInstacart /><h1>Socialgram</h1></div>
         <div className=' flex gap-4'>
           <div onClick={profile}><RiAccountPinCircleFill /></div>

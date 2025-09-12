@@ -49,6 +49,7 @@ const Posts = () => {
       }
     }catch(error){
       console.log("loged out")
+      localStorage.removeItem("id"); 
     }
     }
     getPosts()

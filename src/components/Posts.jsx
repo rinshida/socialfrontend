@@ -21,6 +21,7 @@ const Posts = () => {
 
     async function getPosts() {
 
+      try{
       const response = await axios.get("https://socialbackend-gxmb.onrender.com/api/getposts", {
         headers: { Authorization: `Bearer ${token}` } //barer(jwt token)
       })
@@ -46,6 +47,9 @@ const Posts = () => {
       } else {
         console.log("not found")
       }
+    }catch(error){
+      console.log(error)
+    }
     }
     getPosts()
 

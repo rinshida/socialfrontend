@@ -15,7 +15,7 @@ import Profile from './components/Profile'
 
 const App = () => {
   return (
-    <div className='w-screen overflow-hidden'>
+    <div className='w-screen'>
       {/* <Navebar/> */}
       <Routes>
         <Route  path='/signup' element={<PublicRoute><Signup/></PublicRoute>} />

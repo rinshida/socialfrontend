@@ -18,7 +18,7 @@ const Profile = () => {
            
         </div>
        </div>
-       <div className=' w-screen'>
+       <div className=' grid lg:grid-cols-4 sm:grid-cols-1 gap-5'>
         {[1,2,3,4,5].map((ele,i)=>{
             return( 
             <div  className=' w-[250px] h-[330px] flex flex-col gap-2 overflow-hidden border rounded-xl border-white  bg-white p-5' key={i}>

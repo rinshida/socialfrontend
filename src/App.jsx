@@ -11,6 +11,7 @@ import Navebar from './components/Navebar'
 import ProtectedRoute from './components/ProtectedRoute'
 import LayoutWithNavbar from './components/LayoutWithNavbar'
 import PublicRoute from './components/PublicRoute'
+import Profile from './components/Profile'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route  path='/posts' element={<ProtectedRoute><LayoutWithNavbar><Posts/></LayoutWithNavbar></ProtectedRoute>} />
         <Route  path='/post' element={<ProtectedRoute><LayoutWithNavbar><Post/></LayoutWithNavbar></ProtectedRoute>} />
         <Route  path='/add' element={<ProtectedRoute><LayoutWithNavbar><AddPost/></LayoutWithNavbar></ProtectedRoute>} />
+        <Route  path='/profile' element={<ProtectedRoute><LayoutWithNavbar><Profile/></LayoutWithNavbar></ProtectedRoute>} />
         
 
       </Routes>

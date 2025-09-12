@@ -1,8 +1,19 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 
 const Profile = () => {
+
+
+
+    // useEffect(()=>{
+    //     const response = axios.get("https://socialbackend-gxmb.onrender.com/api/getprofile",{
+    //         headers : 'Bearer '
+    //     })
+    // })
+
+
   return (
-    <div className=' flex flex-col gap-[20px] w-full  bg-blue-950 py-[30px] pl-[60px] pr-[60px] box-border'>
+    <div className=' flex flex-col gap-[50px] w-full  bg-blue-950 py-[30px] pl-[60px] pr-[120px] box-border'>
 
        <div className=' w-full flex justify-between'>
         <div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src="" alt="" /></div>

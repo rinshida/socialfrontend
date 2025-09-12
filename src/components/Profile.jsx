@@ -4,7 +4,7 @@ const Profile = () => {
   return (
     <div className=' flex flex-col gap-[20px] w-screen bg-blue-950 p-[30px]'>
 
-       <div className=' w-screen flex gap-[20px]'>
+       <div className=' w-screen flex justify-between'>
         <div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src="" alt="" /></div>
         <div className=' flex gap-[200px] items-center text-2xl text-white'>
             <div className=' flex flex-col '>

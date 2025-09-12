@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div className=' flex flex-col gap-[20px] w-screen bg-blue-950 p-[30px]'>
+    <div className=' flex flex-col gap-[20px] w-screen  bg-blue-950 py-[30px] px-[60px]'>
 
        <div className=' w-screen flex justify-between'>
         <div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src="" alt="" /></div>
@@ -23,7 +23,7 @@ const Profile = () => {
            
         </div>
        </div>
-       <div className=' grid lg:grid-cols-4 sm:grid-cols-1 gap-3 '>
+       <div className=' grid lg:grid-cols-4 sm:grid-cols-1  '>
         {[1,2,3,4,5].map((ele,i)=>{
             return( 
             <div  className=' w-[250px] h-[330px] flex flex-col gap-2 overflow-hidden border rounded-xl border-white  bg-white p-5' key={i}>

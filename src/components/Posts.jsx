@@ -48,7 +48,7 @@ const Posts = () => {
         console.log("not found")
       }
     }catch(error){
-      console.log(error)
+      console.log("loged out")
     }
     }
     getPosts()

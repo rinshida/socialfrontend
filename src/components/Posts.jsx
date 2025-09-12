@@ -90,7 +90,7 @@ const Posts = () => {
   }
 
   return (
-    <div className=' w-screen h-screen flex flex-col gap-5 items-center py-5 bg-gradient-to-b from-blue-950 to-blue-800
+    <div className=' w-full h-screen flex flex-col gap-5 items-center py-5 bg-gradient-to-b from-blue-950 to-blue-800
 '>
       {/* <h1 className=' text-6xl font-black text-white'>POSTS</h1> */}
       <div className=' grid lg:grid-cols-4 sm:grid-cols-1 gap-5'>

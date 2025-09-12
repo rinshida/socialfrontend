@@ -11,7 +11,7 @@ const Login = () => {
          e.preventDefault()
         console.log(email,password)
        
-
+  try{
   
         const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/login",{email,password})
         if(response.status==200){
@@ -25,12 +25,18 @@ const Login = () => {
             console.log(response)
             navigate('/posts')
         }else{
-          window.alert("incorrect password")
+          window.alert(response.data)
             console.log(response)
         }
      
+    } catch(err){
+       if (err.response) {
+    window.alert(err.response.data.message); // message from backend
+  } else {
+    window.alert("Something went wrong");
+  }
     }
-   
+  }
     
   return (
     <div className=' w-screen h-screen flex flex-col items-center justify-center gap-3 bg-blue-950'>

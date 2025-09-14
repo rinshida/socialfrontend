@@ -125,7 +125,7 @@ const Profile = () => {
                               <div className=' flex justify-between items-center h-[20px] '><div className=' flex gap-2 items-center h-[20px] '>
                                 {user && <img className=' w-[20px] h-[20px] rounded-[50px] bg-gray-100' src={user.profile} alt="img" />}
                                 {user && <h1>{user.name}</h1>}</div>
-                                <button className=' border border-blue-950 text-blue-950 font-bold p-[1px]'>follow</button></div>
+                                <button className=' border border-blue-950 text-blue-950 font-bold px-[3px]'>follow</button></div>
                               <div className=' flex flex-col justify-between '>
                                 <div className='  w-[250px] '>
                                 <div className=' w-[200px] h-[200px] overflow-hidden'><div className=' w-[200px] h-[200px] duration-700 flex '

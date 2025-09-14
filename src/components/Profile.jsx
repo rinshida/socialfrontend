@@ -6,7 +6,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import { FaRegCircle } from "react-icons/fa";
 
-const Posts = () => {
+const Profile = () => {
   const [user, setUser] = useState(null)
   const [posts, setPosts] = useState([])
   const [like, setLike] = useState({})

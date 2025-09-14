@@ -93,7 +93,8 @@ const Profile = () => {
     <div className=' flex flex-col gap-[50px] w-full  bg-blue-950 py-[30px] pl-[60px] pr-[120px] box-border'>
 
        <div className=' w-full flex justify-between'>
-        <div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src={user.profile} alt="" /></div>
+        <div>{user && <img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src={user.profile} alt="" />}
+</div>
         <div className=' flex gap-[200px] items-center text-2xl text-white'>
             <div className=' flex flex-col '>
                 <h1>posts</h1>
@@ -114,13 +115,13 @@ const Profile = () => {
        <div className=' grid lg:grid-cols-4 sm:grid-cols-1 gap-3 '>
         {posts.map((post, j)=>{
             return( 
-                <div  className=' w-[250px] h-[330px] flex flex-col gap-2 overflow-hidden border rounded-xl border-white  bg-white p-5' key={j}>
+                <div   className=' w-[250px] h-[330px] flex flex-col gap-2 overflow-hidden border rounded-xl border-white  bg-white p-5' key={j}>
                               <div className=' flex gap-2 items-center h-[20px] '>
                                 <img className=' w-[20px] h-[20px] rounded-[50px] bg-gray-100' src={post.userId.profile} alt="img" />
                                 <h1>{post.userId.name}</h1></div>
                               <div className=' flex flex-col justify-between '><div className='  w-[250px] '>
                                 <div className=' w-[200px] h-[200px] overflow-hidden'><div className=' w-[200px] h-[200px] duration-700 flex '
-                                  style={{ transform: `translateX(-${carosal[j] * 100}%)` }}>
+                                  style={{ transform: `translateX(-${(carosal[j] || 0) * 100}%)` }}>
                 
                                   {post.images.map((img, i) => {
                                     return (

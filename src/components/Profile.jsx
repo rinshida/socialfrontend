@@ -92,7 +92,7 @@ const Profile = () => {
   return (
     <div className=' flex flex-col gap-[30px] w-full  bg-blue-950 py-[30px] pl-[60px] pr-[120px] box-border'>
 
-       <div className=' flex flex-col gap-4 border-b border-b-white'><div className=' w-full flex gap-[200px] p-[10px]'>
+       <div className=' flex flex-col gap-4 border-b border-b-white p-[10px]'><div className=' w-full flex gap-[200px] '>
         {user&&<div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src={user.profile} alt="" />
         
 </div>}

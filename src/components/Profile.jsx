@@ -92,7 +92,7 @@ const Profile = () => {
   return (
     <div className=' flex flex-col gap-[30px] w-full  bg-blue-950 py-[30px] pl-[60px] pr-[120px] box-border'>
 
-       <div className=' flex flex-col gap-4 border-b border-b-white p-[10px]'><div className=' w-full flex gap-[200px] '>
+       <div className=' flex flex-col gap-1 border-b border-b-white p-[10px] w-full'><div className=' w-full flex gap-[200px] '>
         {user&&<div><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src={user.profile} alt="" />
         
 </div>}
@@ -114,8 +114,8 @@ const Profile = () => {
         </div>
        </div>
        <div className=' flex flex-col'><h1 className=' text-2xl text-white'>{user?.name}</h1></div>
-       <div className=' flex items-center justify-center w-screen'>
-        <button className=' w-[300px] h-[50px] bg-white text-blue-950'>Edit profile</button>
+       <div className=' flex items-center justify-center w-full'>
+        <button className=' w-[300px] h-[50px] bg-white text-blue-950 font-bold'>Edit profile</button>
        </div>
        </div>
        <div className=' grid lg:grid-cols-4 sm:grid-cols-1 gap-3 '>

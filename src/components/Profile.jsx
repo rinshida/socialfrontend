@@ -113,7 +113,7 @@ const Profile = () => {
            
         </div>
        </div>
-       <div className=' flex flex-col'><h1 className=' text-2xl text-white'>{user.name}</h1></div>
+       <div className=' flex flex-col'><h1 className=' text-2xl text-white'>{user?.name}</h1></div>
        <div className=' flex items-center justify-center w-screen'>
         <button className=' w-[300px] h-[50px] bg-white text-blue-950'>Edit profile</button>
        </div>

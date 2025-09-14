@@ -92,9 +92,10 @@ const Profile = () => {
   return (
     <div className=' flex flex-col gap-[50px] w-full  bg-blue-950 py-[30px] pl-[60px] pr-[120px] box-border'>
 
-       <div className=' w-full flex justify-between'>
-        <div>{user && <img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src={user.profile} alt="" />}
-</div>
+       <div className=' w-full flex gap-[200px] border-b border-b-white'>
+        {user&&<div className=' flex flex-col '><img className=' w-[100px] h-[100px] rounded-[50px] bg-gray-50' src={user.profile} alt="" />
+        <h1 className=' text-2xl text-white'>{user.name}</h1>
+</div>}
         <div className=' flex gap-[200px] items-center text-2xl text-white'>
             <div className=' flex flex-col '>
                 <h1>posts</h1>
@@ -119,7 +120,8 @@ const Profile = () => {
                               <div className=' flex gap-2 items-center h-[20px] '>
                                 {user && <img className=' w-[20px] h-[20px] rounded-[50px] bg-gray-100' src={user.profile} alt="img" />}
                                 {user && <h1>{user.name}</h1>}</div>
-                              <div className=' flex flex-col justify-between '><div className='  w-[250px] '>
+                              <div className=' flex flex-col justify-between '>
+                                <div className='  w-[250px] '>
                                 <div className=' w-[200px] h-[200px] overflow-hidden'><div className=' w-[200px] h-[200px] duration-700 flex '
                                   style={{ transform: `translateX(-${(carosal[j] || 0) * 100}%)` }}>
                 

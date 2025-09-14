@@ -99,9 +99,11 @@ const Posts = () => {
           return (
             //  <Link to={`/post?id=${post._id}`} key={i}>
             <div  className=' w-[250px] h-[330px] flex flex-col gap-2 overflow-hidden border rounded-xl border-white  bg-white p-5' key={j}>
-              <div className=' flex gap-2 items-center h-[20px] '>
+              <div className=' flex justify-between items-center h-[25px] '><div className=' flex gap-2 items-center h-[20px] '>
                 <img className=' w-[20px] h-[20px] rounded-[50px] bg-gray-100' src={post.userId.profile} alt="img" />
                 <h1>{post.userId.name}</h1></div>
+                <button className=' border border-blue-950 text-blue-950 font-bold px-[3px]'>follow</button>
+                </div>
               <div className=' flex flex-col justify-between '><div className='  w-[250px] '>
                 <div className=' w-[200px] h-[200px] overflow-hidden'><div className=' w-[200px] h-[200px] duration-700 flex '
                   style={{ transform: `translateX(-${carosal[j] * 100}%)` }}>

@@ -42,7 +42,7 @@ const Posts = () => {
         posts.map((p, i) => {
           likeState[i] = userData.likedPosts.includes(p._id);
           likeCount[i] = p.likes
-          followState[i] = userData.followers.includes(p._id)
+          followState[i] = userData.followers.includes(p.userId)
         });
 
         setLike(likeState);

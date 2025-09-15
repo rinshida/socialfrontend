@@ -12,6 +12,7 @@ const Posts = () => {
   const [like, setLike] = useState({})
   const [carosal, setCarosal] = useState({})
   const [likeCount,setLikeCount] = useState({})
+  const [follow,setFollow] = useState({})
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -37,13 +38,16 @@ const Posts = () => {
         console.log(posts)
         const likeState = {};
         const likeCount = {}
+        const followState = {}
         posts.map((p, i) => {
           likeState[i] = userData.likedPosts.includes(p._id);
           likeCount[i] = p.likes
+          followState[i] = userData.followers.includes(p._id)
         });
 
         setLike(likeState);
         setLikeCount(likeCount)
+        setFollow(followState)
       } else {
         console.log("not found")
       }
@@ -89,6 +93,26 @@ const Posts = () => {
 
   }
 
+
+  const setFollowing = async (j, targetUserId) => {
+    console.log("on setFollwing function");
+    const newFollowState = !follow[j];
+    setFollow(prev => ({ ...prev, [j]: newFollowState }))
+    
+    const response = await axios.post("https://socialbackend-gxmb.onrender.com/api/follow", { userId:user._id, targetUserId, followState: newFollowState })
+    if (response.status == 200) {
+      console.log("follow successfully")
+      // window.alert("like successfull")
+      console.log(response)
+    } else {
+      window.alert("follow unsuccessfull")
+      console.log(response)
+    }
+
+
+
+  }
+
   return (
     <div className=' w-full h-screen flex flex-col gap-5 items-center py-5 bg-gradient-to-b from-blue-950 to-blue-800
 '>
@@ -98,15 +122,15 @@ const Posts = () => {
         {posts.map((post, j) => {
           return (
             //  <Link to={`/post?id=${post._id}`} key={i}>
-            <div  className=' w-[250px] h-[330px] flex flex-col gap-2 overflow-hidden border rounded-xl border-white  bg-white p-5' key={j}>
-              <div className=' flex justify-between items-center h-[25px] '><div className=' flex gap-2 items-center h-[20px] '>
-                <img className=' w-[20px] h-[20px] rounded-[50px] bg-gray-100' src={post.userId.profile} alt="img" />
-                <h1>{post.userId.name}</h1></div>
-                <button className=' border border-blue-950 text-blue-950 font-bold px-[4px] h-[20px] rounded-[3px] flex items-center justify-center'>Follow</button>
+            <div  className=' w-[250px] h-[330px] flex flex-col gap-[10px] overflow-hidden border rounded-xl border-white  bg-white p-5' key={j}>
+              <div className=' flex justify-between items-center h-[20px] '><div className=' flex gap-2 items-center h-[20px] '>
+                <img className=' w-[20px] h-[20px] rounded-[50px] bg-gray-100' src={post.userId?.profile} alt="img" />
+                <h1>{post.userId?.name}</h1></div>
+                <button className=' border border-blue-950 text-blue-950 font-bold px-[4px] h-[20px] rounded-[3px] flex items-center justify-center' onClick={() => setFollowing(j,post.userId)}>{like[j] == true?"Following" : "Follow"}</button>
                 </div>
               <div className=' flex flex-col justify-between '><div className='  w-[250px] '>
                 <div className=' w-[200px] h-[200px] overflow-hidden'><div className=' w-[200px] h-[200px] duration-700 flex '
-                  style={{ transform: `translateX(-${carosal[j] * 100}%)` }}>
+                  style={{ transform: `translateX(-${(carosal[j] || 0) * 100}%)` }}>
 
                   {post.images.map((img, i) => {
                     return (
